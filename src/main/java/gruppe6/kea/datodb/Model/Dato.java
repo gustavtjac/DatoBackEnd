@@ -1,6 +1,7 @@
 package gruppe6.kea.datodb.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -23,6 +24,7 @@ public class Dato {
 
     @ManyToOne()
     @JoinColumn(name = "profile_id")
+    @JsonBackReference
     private Profile profile;
 
 
